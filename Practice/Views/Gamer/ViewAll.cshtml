@@ -1,0 +1,12 @@
+@model Practice.DOA.GamerDbContext
+<h1>View All Gamers</h1>
+@foreach (GamerModel gamer in @Model.gamers)
+{
+    <p>ID : @gamer.id</p>
+    <p>Name : @gamer.name</p>
+    <p>Age : @gamer.age</p>
+    @if(gamer.hoursPlayed > 500)
+    {
+        <p>Wow! This gamer has played over 500 hours</p>
+    }
+}
